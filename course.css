@@ -1,0 +1,266 @@
+:root {
+    /* FONTS */
+    --poppins: "Poppins", sans-serif;
+    --montserrat: "Montserrat", sans-serif;
+    --Nunito: "Nunito", sans-serif;
+  
+    /* Colors */
+    --Blue-Color: #1e72eb;
+    --White-Color: #ffffff;
+    --DarkBlue-Color: #0038d2;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: var(--poppins);
+    background-color: var(--White-Color);
+    color: #333;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 28px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .header {
+    width: 100%;
+    background-color: var(--Blue-Color);
+align-content: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    min-height: 15vh;
+  }
+  
+  .logo {
+    display: flex;
+    align-items: center;
+    font-size: 35px;
+    font-weight: 700;
+    color: var(--White-Color);
+    font-family: var(--montserrat);
+  }
+  .logo a{
+    text-decoration: none;
+    color: var(--White-Color);
+  }
+  .logo img {
+    width: 110px;
+    margin-left: 20px;
+  }
+  
+  nav .nav-links ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+  }
+  
+  nav .nav-links ul li a {
+    text-decoration: none;
+    color: var(--White-Color);
+    font-size: 1vw;
+    font-family: var(--Nunito);
+    transition: color 1ms ease;
+}
+
+nav .nav-links ul li a:hover {
+    color: var(--DarkBlue-Color);
+    border-bottom: 2px solid white;
+    font-size: 1.2em;
+  }
+  .login-btn {
+    display: flex;
+    align-items: center;
+  }
+  
+  .login-link {
+    display: flex;
+    align-items: center;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+    width: 50px;
+    transition: width 0.4s ease;
+  }
+  
+  .login-link i {
+    font-size: 20px;
+    transition: transform 0.4s ease, margin 0.4s ease;
+  }
+  
+  .login-link .text {
+    margin-left: 10px;
+    opacity: 0;
+    white-space: nowrap;
+    transition: opacity 0.4s ease;
+  }
+  
+  .login-link:hover {
+    width: 160px;
+  }
+  
+  .login-link:hover .text {
+    opacity: 1;
+  }
+  
+  .login-link:hover i {
+    margin-left: auto;
+    margin-right: 10px;
+  }
+.courses-section {
+  padding: 60px 20px;
+  background-color: #f0f8ff;
+  color: #003366;
+}
+
+.courses-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.courses-container h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #0056b3;
+}
+
+.course-category h3 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #003366;
+}
+
+.course-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  margin-bottom: 50px;
+}
+
+.course-card {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.course-card:hover {
+  transform: translateY(-5px);
+}
+
+.course-card img {
+  width: fit-content;
+  height: auto; /* Maintain aspect ratio */
+  object-fit: contain; /* 👈 Image crop nahi hogi */
+  border-radius: 8px;
+  margin-bottom: 15px;
+  max-height: 180px; /* Optional: limit max height */
+  background-color: #fff; /* In case image is smaller */
+}
+
+
+.course-card h4 {
+  font-size: 1.2rem;
+  color: #0056b3;
+  margin-bottom: 10px;
+}
+
+.course-card p {
+  font-size: 0.95rem;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.course-card a {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #0056b3;
+  color: white;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.course-card a:hover {
+  background-color: #004080;
+}
+
+.footer {
+  background-color: #1E72EB;
+  color: #ffffff;
+  
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+.footer .social-icons {
+  margin-bottom: 20px;
+}
+
+.footer .follow {
+  font-size: 24px;
+  margin-bottom: 15px;
+  color: #f4f4f4;
+}
+
+.footer .social-icons a {
+  display: inline-block;
+  margin: 0 10px;
+  color: #ffffff;
+  font-size: 20px;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.footer .social-icons a:hover {
+  color: #9b59b6; /* Purple shade for hover */
+  transform: scale(1.2);
+}
+
+
+.footer .copy-right {
+  font-size: 14px;
+  color: #aaaaaa;
+  margin-top: 15px;
+}
+.copy-right p{
+  color: var(--White-Color);
+}
+  @media (max-width: 768px) {
+    .container {
+      flex-direction: column;
+      gap: 10px;
+    }
+    .header{
+      position: static;
+    }
+    .logo{
+      font-size: 20px;
+    }
+  .logo img{
+    width: 70px;
+  }
+  nav .nav-links ul li a{
+    font-size: 3vw
+  }
+    nav .nav-links ul {
+      flex-direction: row;
+      align-items: center;
+    }
+  }
+  
