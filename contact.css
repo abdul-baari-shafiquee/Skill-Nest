@@ -1,0 +1,241 @@
+:root {
+  /* FONTS */
+  --poppins: "Poppins", sans-serif;
+  --montserrat: "Montserrat", sans-serif;
+  --Nunito: "Nunito", sans-serif;
+
+  /* Colors */
+  --Blue-Color: #1e72eb;
+  --White-Color: #ffffff;
+  --DarkBlue-Color: #0038d2;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--poppins);
+  background-color: var(--White-Color);
+  color: #333;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.header {
+  width: 100%;
+  background-color: var(--Blue-Color);
+align-content: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  min-height: 15vh;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-size: 35px;
+  font-weight: 700;
+  color: var(--White-Color);
+  font-family: var(--montserrat);
+}
+.logo a{
+  text-decoration: none;
+  color: var(--White-Color);
+}
+.logo img {
+  width: 110px;
+  margin-left: 20px;
+}
+
+nav .nav-links ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+nav .nav-links ul li a {
+  text-decoration: none;
+  color: var(--White-Color);
+  font-size: 1vw;
+  font-family: var(--Nunito);
+  transition: color 1ms ease;
+}
+
+nav .nav-links ul li a:hover {
+  color: var(--DarkBlue-Color);
+  border-bottom: 2px solid white;
+  font-size: 1.2em;
+}
+.login-btn {
+  display: flex;
+  align-items: center;
+}
+
+.login-link {
+  display: flex;
+  align-items: center;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+  width: 50px;
+  transition: width 0.4s ease;
+}
+
+.login-link i {
+  font-size: 20px;
+  transition: transform 0.4s ease, margin 0.4s ease;
+}
+
+.login-link .text {
+  margin-left: 10px;
+  opacity: 0;
+  white-space: nowrap;
+  transition: opacity 0.4s ease;
+}
+
+.login-link:hover {
+  width: 160px;
+}
+
+.login-link:hover .text {
+  opacity: 1;
+}
+
+.login-link:hover i {
+  margin-left: auto;
+  margin-right: 10px;
+}
+main{
+  color: black;
+  height: auto;
+  background-image: url("Assets/Images/contact-bg.png");
+  z-index: 9999;
+}
+.contact-section {
+  background-color: #f5f9ff;
+  padding: 60px 20px;
+  color: #003366;
+}
+
+.contact-container {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.contact-container h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #0056b3;
+}
+
+.contact-container p {
+  font-size: 1rem;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.contact-form .form-group {
+  margin-bottom: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  background-color: #fff;
+}
+
+.contact-form button {
+  background-color: #0056b3;
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #004080;
+}
+
+.footer {
+background-color: #1E72EB;
+color: #ffffff;
+
+text-align: center;
+font-family: 'Poppins', sans-serif;
+}
+
+.footer .social-icons {
+margin-bottom: 20px;
+}
+
+.footer .follow {
+font-size: 24px;
+margin-bottom: 15px;
+color: #f4f4f4;
+}
+
+.footer .social-icons a {
+display: inline-block;
+margin: 0 10px;
+color: #ffffff;
+font-size: 20px;
+transition: color 0.3s, transform 0.3s;
+}
+
+.footer .social-icons a:hover {
+color: #9b59b6; /* Purple shade for hover */
+transform: scale(1.2);
+}
+
+
+.footer .copy-right {
+font-size: 14px;
+color: #aaaaaa;
+margin-top: 15px;
+}
+.copy-right p{
+color: var(--White-Color);
+}
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .header{
+    position: static;
+  }
+  .logo{
+    font-size: 20px;
+  }
+.logo img{
+  width: 70px;
+}
+nav .nav-links ul li a{
+  font-size: 3vw
+}
+  nav .nav-links ul {
+    flex-direction: row;
+    align-items: center;
+  }
+}
